@@ -6,6 +6,12 @@
   <title>Document</title>
 </head>
 <body>
-  "Hello world"
+  <% @recipes.each do |recipe| %>
+    <p><h1><%= recipe.name %></h1></p>
+    <p><h4><%= recipe.ingredients %></h1></p>
+    <p><h4><%= recipe.cook_time %></h1></p><br>
+    <span><a href="/recipes/<%= recipe.id %>">See recipe page</a></span>
+  <% end %>
+  <span><a href="/"></a></span>
 </body>
 </html>
